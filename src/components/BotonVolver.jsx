@@ -17,11 +17,9 @@ function BotonVolver() {
 
 
   return (
-
     <a onClick={(event) => handleClick(event, destino)}>
     <button className="botonVolver">Volver al Menú</button>
-  </a>
-         
+  </a>     
   )
 }
 

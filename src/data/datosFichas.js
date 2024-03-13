@@ -98,6 +98,74 @@ background-color: darken($color-fondo, 10%); \
 @include boton($color-secundario); \n\
 }",
 },
+
+{
+name:"PHP",
+texto:"Con mi experiencia en PHP, puedo crear aplicaciones web dinámicas y funcionales, desde sitios \
+simples hasta plataformas complejas. Conozco los fundamentos como variables, arrays y bucles, y estoy \
+familiarizado con frameworks populares como Laravel. Puedo integrar PHP con bases de datos y otras \
+tecnologías web. En resumen, soy un desarrollador versátil y competente en el mundo del desarrollo \
+web gracias a mi dominio de PHP.",
+titulo1:"Imprimir mensaje en PHP",
+contenido1:"<h1\><?php echo \"¡Hola, mundo!\"; \?\><\/h1\\>"
+},
+
+{
+name:"Angular",
+texto:"Con mi experiencia en Angular, destaco como un desarrollador capacitado para crear aplicaciones \
+web dinámicas y de alta calidad. Gracias a mi dominio de este framework de desarrollo frontend, puedo \
+construir interfaces de usuario modernas y receptivas de manera eficiente. Mis habilidades incluyen la \
+creación de componentes reutilizables, el enrutamiento de páginas, la gestión del estado de la aplicación \
+y la integración con servicios backend mediante solicitudes HTTP. Además, estoy familiarizado con conceptos \
+avanzados de Angular, como la inyección de dependencias, la creación de directivas personalizadas y el uso \
+de observables para manejar flujos de datos asíncronos. Mi experiencia en Angular me permite desarrollar \
+aplicaciones escalables y mantenibles que cumplen con los estándares de la industria y ofrecen una \
+experiencia de usuario excepcional. En resumen, soy un profesional competente y versátil en el desarrollo \
+frontend gracias a mi experiencia con Angular.",
+titulo1:"Componente Lista",
+contenido1:"\\\\Creamos el comonente mediante consola\n\
+ng generate component task-list \n\
+\\\\En el componente agregamos una lista y un boton de agregar \n\
+<h2>Lista de tareas</h2> \n\
+<\ ul\><li *ngFor=\"let task of tasks\">{{ task }}</li><\/ul> \n\
+<form (submit)=\"addTask()\">\n<input type=\"text\" [(ngModel)]=\"newTask\" \nplaceholder=\"Nueva tarea\"> \n\
+<button type=\"submit\">Agregar tarea</button> \
+</form>\n \\\\En el archivo task-list.component.ts,\n\ agregamos la lógica para agregar y eliminar tarea \n\
+import { Component } from '@angular/core'; \n\
+@Component({selector: 'app-task-list', \n\
+templateUrl: './task-list.component.html', \n\
+styleUrls: ['./task-list.component.css'] \n\
+})\n\ export class TaskListComponent {\n\
+tasks: string[] = ['Tarea 1', 'Tarea 2', 'Tarea 3']; \n\
+newTask: string = ''; \n\
+addTask() {\n\
+if (this.newTask.trim() !== '') { \n\
+this.tasks.push(this.newTask); \n\
+this.newTask = '';\n\}\n\}\n\}",
+},
+{
+name:"React",
+texto:"Con mi experiencia en React, soy capaz de crear interfaces de usuario dinámicas y escalables \
+para aplicaciones web modernas. Como desarrollador, puedo construir componentes reutilizables y \
+estructurarlos en una arquitectura coherente utilizando el enfoque basado en componentes de React. \
+Mi dominio de conceptos fundamentales como el estado local, las props, el ciclo de vida de los \
+componentes y el enlace de datos me permite desarrollar aplicaciones robustas y de alto rendimiento. \
+Además, estoy familiarizado con el ecosistema de herramientas de React, como React Router para el \
+enrutamiento, Redux para la gestión del estado global y axios para realizar solicitudes HTTP. \
+Gracias a mi experiencia en React, puedo crear experiencias de usuario fluidas y receptivas que \
+satisfacen las necesidades de los usuarios y cumplen con los estándares de la industria. En resumen, \
+soy un desarrollador competente y versátil en el desarrollo frontend gracias a mi experiencia con React.",
+titulo1:"Componente Lista",
+contenido1:"import React, { useState } from 'react';\n function App() { \n const [tasks, setTasks] = \
+useState([]);\n\const [newTask, setNewTask] = useState('');\n const handleAddTask = () => { \n\
+if (newTask.trim() !== '') {\n setTasks([...tasks, newTask]); setNewTask('');\n}\n }; \
+return ( \n <div> \n <h1>Lista de tareas</h1> \n<ul> \n {tasks.map((task, index) => (\n\
+<li key={index}>{task}</li>\n))}\n</ul>\n<input type=\"text\"value={newTask} \n\
+onChange={(e) => setNewTask(e.target.value)}\nplaceholder=\"Nueva tarea\"/> \n\
+<button onClick={handleAddTask}>Agregar tarea</button></div>);}. \n\
+export default App;",
+},
+
 ];
 
 export default dataFicha

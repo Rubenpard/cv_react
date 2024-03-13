@@ -5,9 +5,48 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import dataFicha from './data/datosFichas.js'
 import Fichas from './components/Fichas.jsx'
-import Conocimiento from './components/Conocimiento.jsx'
 import dataFichaTecnologia from './data/datosFichasTegnologias.js'
+import dataFichaBibliotecas from './data/datosFichasBibliotecas.js'
+import dataFichaEstrategia from './data/datosFichasEstrategias.js'
 
+const routes = [
+  {
+    path: "/cvreact/",
+    element: <App/>
+  }
+]
+
+dataFicha.forEach((ficha) => 
+  {routes.push({
+    path: `/cvreact/${ficha.name}`,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+dataFichaTecnologia.forEach((ficha) => 
+  {routes.push({
+    path: `/cvreact/${ficha.name}`,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+dataFichaBibliotecas.forEach((ficha) => 
+  {routes.push({
+    path: `/cvreact/${ficha.name}`,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+dataFichaEstrategia.forEach((ficha) => 
+  {routes.push({
+    path: `/cvreact/${ficha.name}`,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+//TRABAJAR EN LOCAL
+
+/*
 const routes = [
   {
     path: "/",
@@ -28,6 +67,22 @@ dataFichaTecnologia.forEach((ficha) =>
     element: <Fichas ficha={ficha}/>
   })
 })
+
+dataFichaBibliotecas.forEach((ficha) => 
+  {routes.push({
+    path: ficha.name,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+dataFichaEstrategia.forEach((ficha) => 
+  {routes.push({
+    path: ficha.name,
+    element: <Fichas ficha={ficha}/>
+  })
+})
+
+*/
 
 const router = createBrowserRouter (routes)
 

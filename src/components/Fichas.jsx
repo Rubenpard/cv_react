@@ -15,7 +15,7 @@ function Fichas({ficha}) {
               <div className="borderLeft overflow">
               <div>
                   <h3 className="azul">{ficha.titulo1}</h3>
-                  <p><pre>{ficha.contenido1}</pre></p>
+                  <pre>{ficha.contenido1}</pre>
                   </div>
                   <div>
                   <h3 className="azul">{ficha.titulo2}</h3>

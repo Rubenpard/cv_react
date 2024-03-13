@@ -1,6 +1,8 @@
 
 import dataFicha from '../data/datosFichas'
 import dataFichaTecnologia from '../data/datosFichasTegnologias'
+import dataFichaBibliotecas from '../data/datosFichasBibliotecas'
+import dataFichaEstrategia from '../data/datosFichasEstrategias'
 import BotonVolver from './BotonVolver'
 import FichasLink from './fichasLink'
 
@@ -13,7 +15,15 @@ function Conocimiento() {
  const fichaListTecnologia = dataFichaTecnologia.map((d, index) => {
   return <FichasLink key={index} title={d.name}/>
 })
-  
+
+const fichaListBiblioteca = dataFichaBibliotecas.map((d, index) => {
+  return <FichasLink key={index} title={d.name}/>
+})
+
+const fichaListEstrategia = dataFichaEstrategia.map((d, index) => {
+  return <FichasLink key={index} title={d.name}/>
+})
+
   return (
     <div id="Conocimiento" className="main">
         <div className="cajaTexto">
@@ -33,13 +43,18 @@ function Conocimiento() {
                 <ul className="linksConocimiento">
                 {fichaListTecnologia}
                 </ul>
-              </div>
-              <div>
                 <h3>BIBLIOTECAS</h3>
                 <hr/>
-                <ul>
-                  <li>bootstrap</li>
-                  <li>jquery</li>
+                <ul className="linksConocimiento">
+                {fichaListBiblioteca}
+               
+                </ul>
+              </div>
+              <div>
+                <h3>Estrategias de Optimización</h3>
+                <hr/>
+                <ul className="linksConocimiento">
+               {fichaListEstrategia}
                 </ul>
               </div>
               <div>

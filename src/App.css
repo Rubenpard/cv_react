@@ -114,6 +114,7 @@ body{
 }
 
 .botonVolver{
+  float:right;
   width: 200px;
   background-color: #85b6ee;
   font-size: 18px;
@@ -267,3 +268,99 @@ body{
   display: block;
 }
 
+@media only screen and (max-width: 425px) {
+
+  .titulo{
+
+    margin-top: 150px;
+      
+    h1{
+      font-size: 15vw;
+    }
+    h2{
+      font-size: 5vw;  
+    }
+  }
+  
+  .grid2divs{
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .datosPersonales{
+    display: grid;
+  }
+
+  .main{
+    width: auto;
+    height: auto;
+    margin-bottom: 300px;
+  }
+
+  .line{
+    width: 90%;
+    border-color: #85b6ee;
+    margin: 0px -25% ;
+  }
+
+  .grid4divs{
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .gridFichas {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.mainFicha {
+  height: auto;
+  color: white;
+  line-height: 2;
+  font-size: 15px;
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+  margin: 50px;
+}
+
+.botonFichas{
+  padding: 10px;
+}
+
+.borderLeft {
+  border-left: none;
+  padding: 0px 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.overflow {
+  overflow: scroll;
+  height: 45vh;
+  overflow-x: hidden;
+  overflow: auto;
+}
+
+.cajaTexto{
+  width:90%;
+}
+
+.accordion-header {
+font-size: 15px;
+
+}
+
+.grid3divs{
+  grid-template-columns: auto;
+}
+
+.rotate{
+  height: 0px;
+}
+
+.foto{
+  width: auto;
+}
+
+}
